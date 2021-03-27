@@ -8,7 +8,7 @@ app = application
 
 @application.route('/')
 def home():
-    return "on99"
+    return render_template("index.html")
 
 #@app.route("/<name>")
 #def home(name):
