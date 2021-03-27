@@ -1,6 +1,6 @@
 from flask import Flask, redirect, url_for, render_template, request
 
-application = Flask(__name__, static_url_path='/otherstatic', static_folder=r'C:\Users\85265\PycharmProjects\website_test1\img')
+application = Flask(__name__)
 
 
 #main page
