@@ -27,6 +27,6 @@ def home():
  #   return redirect(url_for("home1"))
 
 if __name__ == "__main__":
-  application.run()
+    application.run()
 
 
