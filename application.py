@@ -8,7 +8,7 @@ app = application
 
 @application.route('/')
 def home():
-    return return render_template("templates/index.html")
+    return return render_template(website_t1\templates\index.html")
 
 #@app.route("/<name>")
 #def home(name):
