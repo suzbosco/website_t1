@@ -1,6 +1,6 @@
 from flask import Flask, redirect, url_for, render_template, request
 
-application = Flask(__name__, template_folder='templates')
+application = Flask(__name__, template_folder='templates', static_folder='img')
 app = application
 
 
