@@ -5,7 +5,7 @@ application = Flask(__name__, static_url_path='/otherstatic', static_folder=r'C:
 
 #main page
 
-@application.route("/")
+@application.route('/')
 def home():
     return render_template("index.html")
 
@@ -13,7 +13,7 @@ def home():
 #def home(name):
  #   return render_template("index.html", content=name, t1=["bosco", "hugo", "on9jai"])
 
-@application.route("/test")
+@application.route('/test')
 def home1():
     return render_template("new.html")
 
@@ -21,7 +21,7 @@ def home1():
 
 
 #redirect
-@application.route("/admin")
+@application.route('/admin')
 def admin():
     return redirect(url_for("home1"))
 
