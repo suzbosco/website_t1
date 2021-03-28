@@ -18,6 +18,10 @@ def home():
 def home1():
     return render_template("new.html")
 
+@application.route('/login')
+def login():
+    return render_template("login.html")
+
 
 
 
