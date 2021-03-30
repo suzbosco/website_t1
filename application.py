@@ -10,7 +10,7 @@ application.permanent_session_lifetime = timedelta(minutes=5)
 
 #main page
 
-@application.route('/')
+@application.route("/")
 def home():
     return render_template("index.html")
 
@@ -22,7 +22,7 @@ def home():
 def home1():
     return render_template("new.html")
 
-@application.route("/login", methods=["POST", "GET"])
+@application.route('/login', methods=["POST", "GET"])
 def login():
     if request.method == "POST":
         session.permanent = True
@@ -37,7 +37,7 @@ def login():
 
         return render_template("login.html")
     
-@application.route("/user")
+@application.route('/user')
 def user_fun():
     if "user_session" in session:
         user = session["user_session"]
@@ -47,7 +47,7 @@ def user_fun():
         return redirect(url_for("login"))
 
 
-@application.route("/logout")
+@application.route('/logout')
 def logout():
     if "user_session" in session:
         user = session["user_session"]
