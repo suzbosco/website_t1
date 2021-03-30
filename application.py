@@ -4,8 +4,8 @@ import os
 
 application = Flask(__name__, template_folder='templates', static_folder='img')
 app = application
-app.secret_key = os.urandom(24)
-app.permanent_session_lifetime = timedelta(minutes=5)
+application.secret_key = os.urandom(24)
+application.permanent_session_lifetime = timedelta(minutes=5)
 
 
 #main page
@@ -22,7 +22,7 @@ def home():
 def home1():
     return render_template("new.html")
 
-@app.route("/login", methods=["POST", "GET"])
+@application.route("/login", methods=["POST", "GET"])
 def login():
     if request.method == "POST":
         session.permanent = True
@@ -37,7 +37,7 @@ def login():
 
         return render_template("login.html")
     
-@app.route("/user")
+@application.route("/user")
 def user_fun():
     if "user_session" in session:
         user = session["user_session"]
@@ -47,7 +47,7 @@ def user_fun():
         return redirect(url_for("login"))
 
 
-@app.route("/logout")
+@application.route("/logout")
 def logout():
     if "user_session" in session:
         user = session["user_session"]
