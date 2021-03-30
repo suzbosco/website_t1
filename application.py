@@ -59,7 +59,7 @@ def logout():
 
 
 
-redirect
+#redirect
 @application.route('/admin')
 def admin():
     return redirect(url_for("home1"))
